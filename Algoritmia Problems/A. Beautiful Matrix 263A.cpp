@@ -10,6 +10,7 @@ void solution(){
             if(l == 1){
                 row = i;
                 column = j;
+                break;
             }
         }
     }

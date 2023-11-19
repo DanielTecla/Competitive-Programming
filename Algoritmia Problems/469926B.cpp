@@ -7,7 +7,8 @@ const int MaxC = 2*100 - 1;
 
 void solution(){
     char grid [MaxR][MaxC];
-    
+    int n;
+    cin>>n;
 }
 
 int main(){
