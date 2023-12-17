@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "*.css": "tailwindcss",
-        "xstring": "cpp",
-        "xiosbase": "cpp"
-    }
-}
