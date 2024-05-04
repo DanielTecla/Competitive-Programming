@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/158/A
+//https://codeforces.com/contest/1969/problem/B
 #include <bits/stdc++.h>
 
 #define endl '\n'
@@ -26,28 +26,7 @@ typedef vector<pii> vpii;
 typedef vector<pll> vpll;
 typedef map<int, int> mii;
 
-void solve(){
-    int n, k; cin>>n>>k;
-    int value, kValue = -1;
-    int count = 0;
-    for(int i = 0; i < n; i ++, k--){
-        cin >> value;
-        if(value == 0 && i == 0){
-            cout<<"0";
-            return;
-        }
-        
-        if(k == 0){
-            kValue = value;
-        }
-
-        if(value >= kValue) count++;
-        else break;
-    }
-    cout<<count;
-}
-
 int main() {
     fast_io
-    solve();
+    
 }

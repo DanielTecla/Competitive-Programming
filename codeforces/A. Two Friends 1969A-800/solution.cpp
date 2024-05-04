@@ -1,3 +1,4 @@
+//https://codeforces.com/contest/1969/problem/A
 #include <bits/stdc++.h>
 
 #define endl '\n'
@@ -26,24 +27,17 @@ typedef vector<pll> vpll;
 typedef map<int, int> mii;
 
 void solve(){
-    int x,y;
-    cin>>x>>y;
-    if(x == 1 || y == 1) cout<<"1\n"<<x<<" "<<y<<endl;
-    else{
-        cout<<2<<endl;
-        cout<<x-1<<" 1"<<endl;
-        cout<<x<<" "<<y<<endl;
-    }
-    
+    int n; cin>>n;
+    vi vect;
+    forn(i,n){ int elem; cin>>elem; vect.push_back(elem); }
+    forn(i,n){ if (vect[vect[i] - 1] == i + 1){ cout<<"2"<<endl; return; } }
+    cout<<"3"<<endl;
 }
 
 int main() {
     fast_io
-    int n;
-    cin>>n;
-    while(n--){
+    int t; cin>>t;
+    while(t--){
         solve();
     }
-
-    return 0;
 }

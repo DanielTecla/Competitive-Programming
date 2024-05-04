@@ -1,3 +1,4 @@
+//https://codeforces.com/problemset/problem/659/A
 #include <bits/stdc++.h>
 
 #define endl '\n'
@@ -26,31 +27,17 @@ typedef vector<pll> vpll;
 typedef map<int, int> mii;
 
 void solve(){
-    int n,k; cin>>n>>k;
-    int init = 1;
-    ll sum = 0;
-    vll vect(n,0);
-    forn(i,n){
-        if(i == n - 1){
-            vect[i] = k - sum;
-        }else if(sum + init<= k){
-            vect[i] = init;
-            sum += init;
-            init <<= 1;
-        }else{
-            vect[i] = k - sum;
-            break;
-        }
-    }
-
-    for(const auto v: vect){    
-        cout<<v<<" ";
-    }
-    cout<<endl;
+    int n;cin>>n;
+    int a;cin>>a;
+    int b;cin>>b;
+    
+    if(b>= 0) while(b--){ a++; if(a == n + 1) a = 1; } 
+    else while(abs(b++)){ a--; if(a == 0) a = n; }
+    
+    cout<<a;
 }
 
 int main() {
     fast_io
-    int t; cin>>t;
-    while(t--) solve();
+    solve();
 }
